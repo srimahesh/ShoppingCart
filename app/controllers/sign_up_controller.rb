@@ -13,4 +13,9 @@ class SignUpController < ApplicationController
 
   def show
   end
+
+  def create
+    flash[:notice] = "User created"
+    redirect_to(:action => index)
+  end
 end
