@@ -1,0 +1,27 @@
+<%= link_to("<< Back to home", root_path, :class => 'back-link') %>
+<% @page_title = "Products" %>
+<div class="subjects index">
+	<h2>Products</h2>
+
+	<!-- <%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new') %> -->
+	
+	<table class="listing" summary="Subject list">
+		<tr class="header">
+			<th>&nbsp;</th>
+			<th>Products</th>
+			<th>Price</th>
+			<th>Actions</th>
+		 </tr>
+		 <% @products.each do |product, price| %>
+		 <tr class="<%= cycle('odd', 'even') %>">
+		 	<td>&nbsp;</td>
+		 	<td><%= product %></td>
+		 	<td><%= price %></td>
+			<td class="actions">
+				<%= link_to("Buy", {:controller => 'checkout',:action => 'cart'}, :class => 'action Show') %>
+			</td>
+		 </tr>
+     <% end %>
+     </table>
+</div>
+

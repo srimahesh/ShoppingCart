@@ -1,5 +1,7 @@
 ShoppingCart::Application.routes.draw do
 
+  get "sign_in/log_in"
+  get "sign_in/index"
   root "sign_up#index"
 
   match ':controller(/:action(/:id))', :via => [:get, :post]

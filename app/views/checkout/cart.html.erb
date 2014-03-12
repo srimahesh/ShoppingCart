@@ -1,0 +1,32 @@
+<%= link_to("<< Back to home", root_path, :class => 'back-link') %>
+
+<div class="Sign up new">
+	<h2>Create section</h2>
+
+	<%= form_for(:section, :url => {:action => 'back'}) do |f|  %>
+
+		<table summary="Signup form fields">
+			<tr>
+				<th>Card holder Name</th>
+				<td><%= f.text_field(:name) %></td>
+			</tr>
+			<tr>
+				<th>Billing Address</th>
+				<td><%= f.text_field(:position) %></td>
+			</tr>
+			<tr>
+				<th>Expiry Date</th>
+				<td><%= f.text_field(:position) %></td>
+			</tr>
+			<tr>
+				<th>Security Code</th>
+				<td><%= f.text_field(:position) %></td>
+			</tr>
+		</table>
+
+		<div class="form-buttons">
+			<%= submit_tag("Purchase") %>
+		</div>
+
+	<% end %>
+</div>	

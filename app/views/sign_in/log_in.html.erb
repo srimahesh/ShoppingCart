@@ -1,9 +1,9 @@
-<%= link_to("<< Back to home", {:action => 'index'}, :class => 'back-link') %>
+<%= link_to("<< Back to home", root_path, :class => 'back-link') %>
 
 <div class="Sign up new">
-	<h2>Create section</h2>
+	<h2>Create User</h2>
 
-	<%= form_for(:section, :url => {:action => 'create'}) do |f|  %>
+	<%= form_for(:section, :url => {:controller => 'products', :action => 'new'}) do |f|  %>
 
 		<table summary="Signup form fields">
 			<tr>
@@ -17,7 +17,7 @@
 		</table>
 
 		<div class="form-buttons">
-			<%= submit_tag("Create user") %>
+			<%= submit_tag("log in") %>
 		</div>
 
 	<% end %>
